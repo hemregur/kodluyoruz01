@@ -1,0 +1,237 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --white: #fff;
+    --primary: #1e3628;
+    --secondary: #FAB95B;
+    --tertiary: #FAEBCD;
+    --transition: 300ms;
+}
+
+body {
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 3rem;
+}
+
+nav {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--secondary);
+
+
+    & ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    & li {
+        list-style-type: none;
+        margin-right: 2rem;
+
+        & a {
+            display: block;
+            padding: 16px 10px;
+            font-size: 1.4rem;
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        & a:hover {
+            color: var(--secondary);
+            background-color: var(--tertiary);
+            transition: var(--transition);
+        }
+    }
+}
+
+.block {
+    width: 50%;
+}
+
+.bg {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    & img {
+        display: block;
+        width: 100%;
+    }
+
+    & .logo {
+        position: absolute;
+        bottom: 50px;
+        width: 280px;
+        transition: var(--transition);
+
+        &:hover {
+            filter: invert(45%);
+            transform: scale(1.09) rotate(-4deg);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+    }
+
+    & .video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        backdrop-filter: blur(6px);
+
+        & iframe {
+            margin-top: 5%;
+            border: 2px solid var(--secondary);
+            border-radius: 12px;
+        }
+    }
+}
+
+.flexDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flexDivIn {
+    margin: 0px 0px 0px 1%;
+    width: 62%;
+}
+
+.event {
+    & li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style-type: none;
+        color: aliceblue;
+        border: 1px solid var(--tertiary);
+        border-radius: 12px;
+        margin-bottom: 1.2rem;
+        padding: 10px;
+        font-size: 1.2rem;
+
+        & .date {
+            width: 100px;
+            text-align: center;
+            padding-right: 10px;
+            margin-right: 10px;
+            border-right: 1px solid var(--tertiary);
+
+            & span {
+                display: block;
+                opacity: .6;
+            }
+        }
+
+        & .ticket {
+            background-color: var(--tertiary);
+            padding: 10px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--secondary);
+
+            &:hover {
+                transition: var(--transition);
+                transform: scale(1.1);
+                background-color: var(--secondary);
+                color: var(--primary);
+            }
+
+        }
+    }
+}
+
+.content {
+
+
+    & p {
+        color: #fff;
+        letter-spacing: 0.2px;
+        line-height: 1.5rem;
+    }
+}
+
+.albums {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    & iframe {
+        margin-bottom: 1rem;
+    }
+}
+
+.ozkanUgur {
+    animation: oUgurOpen 500ms;
+    margin: -14% 1% 0px 0px;
+    position: relative;
+    display: block;
+    align-self: flex-start;
+    width: 34%;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transition);
+
+    &:hover #ou {
+        filter: none;
+        transition: var(--transition);
+
+    }
+
+    & img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        object-position: 50% 0%;
+        filter: grayscale();
+        z-index: 1;
+    }
+
+    & .details {
+        position: absolute;
+        display: block;
+        background-color: #fff;
+        color: #443C68;
+        width: 100%;
+        padding: 10px;
+        border-top: 6px solid var(--secondary);
+        bottom: 0px;
+        z-index: 899;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+    border-top: 1px solid #2f523d;
+
+    & strong {
+        margin-top: 2rem;
+        color: var(--secondary);
+    }
+}
+
+@keyframes oUgurOpen {
+    0% {
+        margin: 0px 1% 0px 0px;
+    }
+
+    100% {
+        margin: -14% 1% 0px 0px;
+    }
+}

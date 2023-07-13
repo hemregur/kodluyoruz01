@@ -1,0 +1,129 @@
+:root {
+  --darkColor: #1a202c;
+  --textColor: #F5F5F5;
+  --bgColor: #F99417;
+}
+
+body {
+  background: var(--darkColor);
+  font-family: 'Roboto', sans-serif;
+}
+
+.clock {
+  margin: 30px 0px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--textColor);
+  font-size: 60px;
+  letter-spacing: 7px;
+
+  & .dot {
+    width: 60px;
+    text-align: center;
+  }
+}
+
+.clockItem {
+  width: 120px;
+  padding: 20px;
+  text-align: center;
+  background-color: var(--bgColor);
+  color: var(--textColor);
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.text1 {
+  position: relative;
+  text-align: center;
+  color: var(--textColor);
+  font-size: 50px;
+  letter-spacing: 4px;
+}
+
+.text2 {
+  position: relative;
+  text-align: center;
+  color: var(--textColor);
+  font-size: 40px;
+  letter-spacing: 4px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+img {
+  margin-top: 120px;
+  width: 17%;
+}
+
+.popup {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #333c4dc3;
+  backdrop-filter: blur(25px);
+  z-index: 1;
+}
+
+.loginBox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  padding: 20px;
+  background-color: var(--darkColor);
+  border-radius: 12px;
+
+  & h3 {
+    color: var(--textColor);
+  }
+
+  & input {
+    margin: 8px 0px 20px 0px;
+    display: block;
+    min-width: 100%;
+    padding: 10px;
+    border: 0px;
+    border-radius: 4px;
+  }
+
+  & button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--bgColor);
+    color: var(--textColor);
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 0px;
+    border-radius: 4px;
+    display: block !important;
+    transition: 300ms;
+  }
+
+  & button:hover {
+    transform: scale(1.02);
+    background-color: #ffaf4d;
+    transition: 300ms;
+  }
+
+  & #error {
+    color: red;
+  }
+}
+
+.time {
+  position: fixed;
+  bottom: 0;
+  left: 0px;
+  color: var(--bgColor);
+  z-index: 0;
+}
